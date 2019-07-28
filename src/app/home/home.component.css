@@ -1,0 +1,39 @@
+
+  span.b {
+    display: inline-block;
+    width: 100px;
+    height: 90px;
+    padding: 5px;  
+    background-color: rgb(207, 230, 245); 
+    margin-top:30px;
+    color:blue;
+    border-radius: 7px;
+  }
+  div.c {
+    display:inline-block;
+    width: 800px;
+    height: 650px;
+    padding: 5px;   
+    background-color: white; 
+
+    color:black;
+    border-radius: 1px;
+    border: 1px solid rgb(149, 215, 241);
+    box-shadow: 1px 1px 5px 3px rgb(228, 227, 227);
+    overflow-y: auto;
+  }
+  div.d {
+    display:inline-block;
+    width: 510px;
+    height: 600px;
+    padding: 5px;  
+    background-color: white; 
+    color:black;
+    border-radius: 1px;
+    border:1px solid rgb(149, 215, 241);
+    box-shadow: 1px 1px 5px 3px rgb(228, 227, 227);
+    margin-bottom:15px;
+    overflow-y: auto;
+  }
+
+

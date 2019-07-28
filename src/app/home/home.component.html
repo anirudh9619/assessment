@@ -1,0 +1,70 @@
+<div>
+<span class="b" style="margin-left:30%; background-color: rgb(4, 111, 211); color:white;">
+        <p style="float: left;">DEL</p>
+        <h3 style="text-align: center; margin-top:45px;">{{del}}</h3>
+</span>
+      <span class="b" style="margin-left: 5px;">
+            <p style="float: left;">INT</p>
+            <h3 style="text-align: center; margin-top:45px;">{{int}}</h3>
+      </span>
+      <span class="b" style="margin-left: 5px;">
+            <p style="float: left;">OOD</p>
+            <h3 style="text-align: center; margin-top:45px;">{{ood}}</h3>
+          </span>
+          <span class="b" style="margin-left: 5px;">
+                <p style="float: left;">DEX</p>
+                <h3 style="text-align: center; margin-top:45px;">{{dex}}</h3>
+              </span>
+              <span class="b" style="margin-left: 5px;">
+                    <p style="float: left;">NFI</p>
+                    <h3 style="text-align: center; margin-top:45px;">{{nfi}}</h3>
+                  </span>
+                </div>
+<div class="row" style="margin-bottom: 25px; margin-top:50px;">
+        <div class="d" style="margin-left: 25px; margin-top:0px;" >
+          <table class="table" style="margin-left:5px;">
+              <img src="../../assets/destination.svg" /><br>
+              | <br>
+              |<br>
+            <tbody *ngFor="let u of stage">
+            <tr>
+                <td>{{u.status_detail}}</td>
+                <td>{{u.time}}</td>
+
+            </tr>
+        </tbody><br>
+            |<br>
+            |  <br>
+            <img src="../../assets/warehouse.svg" />
+          </table>
+        </div>
+              <div class="c" style="margin-left:10px;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>AWB NUMBER</th>
+                            <th>TRANSPORTER</th>
+                            <th>SOURCE </th>
+                            <th>DESTINATION</th>
+                            <th>BRAND</th>
+                            <th>START DATE</th>
+                            <th>ETD</th>
+                            <th>STATUS</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let u of dat.data">
+                        <tr (click)="getStatus(u.awbno);">
+                            <td>{{u.awbno}}</td>
+                            <td>{{u.carrier}}</td>
+                            <td>{{u.from}}</td>
+                            <td>{{u.to}}</td>
+                            <td>{{u.carrier}}</td>
+                            <td>{{u.pickup_date}}</td>
+                            <td *ngIf="u.extra_fields">{{u.extra_fields.expected_delivery_date}}</td>
+                            <td>{{u.current_status}}</td>
+                        </tr>
+                    </tbody>
+                    </table>
+              </div>  
+</div>
