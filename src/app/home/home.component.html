@@ -54,7 +54,7 @@
                         </tr>
                     </thead>
                     <tbody *ngFor="let u of dat.data">
-                        <tr (click)="getStatus(u.awbno);">
+                        <tr (click)="getStatus(u.awbno);" style="cursor:pointer;">
                             <td>{{u.awbno}}</td>
                             <td>{{u.carrier}}</td>
                             <td>{{u.from}}</td>
